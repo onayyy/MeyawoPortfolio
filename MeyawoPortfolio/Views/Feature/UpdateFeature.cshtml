@@ -1,0 +1,25 @@
+﻿@model MeyawoPortfolio.Models.TblFuture
+
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Özellik Güncelleme Sayfası</h2>
+
+<form method="post">
+    <label>Özellik Id</label>
+    <input type="text" class="table table-bordered" readonly value="@Model.FutureID" name="FutureId" />
+    <br />
+    <label>Özellik Başlığı</label>
+    <input type="text" class="table table-bordered" value="@Model.Header" name="Header" />
+    <br />
+    <label>Ad ve Soyad</label>
+    <input type="text" class="table table-bordered" value="@Model.NameSurname" name="NameSurname" />
+    <br />
+    <label>Özellik Etiketi</label>
+    <input type="text" class="table table-bordered" value="@Model.Title" name="Title" />
+    <br />
+    <button class="btn btn-info">Özellik Güncelle</button>
+</form>
+

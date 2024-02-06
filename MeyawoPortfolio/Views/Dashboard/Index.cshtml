@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="~/Templates/meyawo-1.0.0/assets/css/A.css">
+</head>
+
+<div class="row">
+    <div class="col-xl-3 mb-50">
+        <div class="gradient-style1 text-white box-shadow border-radius-10 height-100-p widget-style3">
+            <div class="d-flex flex-wrap align-items-center">
+                <div class="widget-data">
+                    <div class="weight-400 font-20"  style="color:ActiveBorder">Yeni Mesajlar</div>
+                    <br />
+                    <div class="weight-300 font-30">@ViewBag.isNotReadMessageCount</div>
+                </div>
+                <div class="widget-icon">
+                    <div class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 mb-50">
+        <div class="gradient-style2 text-white box-shadow border-radius-10 height-100-p widget-style3">
+            <div class="d-flex flex-wrap align-items-center">
+                <div class="widget-data">
+                    <div class="weight-400 font-20"  style="color:ActiveBorder">Proje Sayısı</div>
+                    <br />
+                    <div class="weight-300 font-30">@ViewBag.projectCount</div>
+                </div>
+                <div class="widget-icon">
+                    <div class="icon"><i class="fa fa-server" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 mb-50">
+        <div class="gradient-style3 text-white box-shadow border-radius-10 height-100-p widget-style3">
+            <div class="d-flex flex-wrap align-items-center">
+                <div class="widget-data">
+                    <div class="weight-400 font-20" style="color:ActiveBorder">Son Proje</div>
+                    <br />
+                    <div class="weight-300 font-20">@ViewBag.lastProjectName</div>
+                </div>
+                <div class="widget-icon">
+                    <div class="icon"><i class="fa fa-bolt" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xl-3 mb-50">
+        <div class="gradient-style4 text-white box-shadow border-radius-10 height-100-p widget-style3">
+            <div class="d-flex flex-wrap align-items-center">
+                <div class="widget-data">
+                    <div class="weight-400 font-20" style="color:ActiveBorder">Hizmet Sayısı</div>
+                    <br />
+                    <div class="weight-300 font-30">@ViewBag.serviceCount</div>
+                </div>
+                <div class="widget-icon">
+                    <div class="icon"><i class="fa fa-globe" aria-hidden="true"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+<br />
+<br />
+
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <canvas id="myChart" style="width:500%;max-width:1000px"></canvas>
+
+    <script>
+        const xValues = ["Flutter","Python","React Native","Unity"]
+        const yValues = [@ViewBag.flutterCount, @ViewBag.pythonCount, @ViewBag.reactNativeCount, @ViewBag.unityCount];
+        const barColors = [
+            "#b91d47",
+            "#00aba9",
+            "#2b5797",
+            "#e8c3b9",
+            "#1e7145"
+        ];
+  
+        new Chart("myChart", {
+            type: "doughnut",
+            data: {
+                labels: xValues,
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: "Project Category Chart"
+                    
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
+
+

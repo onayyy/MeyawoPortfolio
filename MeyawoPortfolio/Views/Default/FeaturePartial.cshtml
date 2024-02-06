@@ -1,0 +1,18 @@
+﻿@model List<MeyawoPortfolio.Models.TblFuture>
+
+@foreach (var item in Model)
+{
+    <header id="home" class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+            <h1 class="header-title">
+                <span class="up">@item.Header</span>
+                <span class="down">@item.NameSurname</span>
+            </h1>
+            <p class="header-subtitle">@item.Title</p>
+
+            <a href="https://github.com/onayyy" class="btn btn-primary">Github</a>
+            <a href="https://www.linkedin.com/in/onay-murato%C4%9Flu-496119214/" class="btn btn-primary">LinkedIn</a>
+        </div>
+    </header>
+}

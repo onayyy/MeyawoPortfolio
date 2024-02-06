@@ -1,0 +1,32 @@
+﻿@model MeyawoPortfolio.Models.TblTestimonial
+
+@{
+    ViewBag.Title = "UpdateTestimonial";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Referans Güncelleme Sayfası</h2>
+
+
+<form method="post">
+    <label>Referans Id:</label>
+    <input type="text" class="table table-bordered" readonly value="@Model.TestimonialID" name="TestimonialId" />
+    <br />
+    <label>Referans Ad ve Soyad:</label>
+    <input type="text" class="table table-bordered" value="@Model.NameSurname" name="NameSurname" />
+    <br />
+    <label>Referans ImageUrl:</label>
+    <input type="text" class="table table-bordered" value="@Model.ImageUrl" name="ImageUrl" />
+    <br />
+    <label>Referans Sosyal Medya Url:</label>
+    <input type="text" class="table table-bordered" value="@Model.SocialMediaUrl" name="SocialMediaUrl"/>
+    <br />
+    <label>Referans Açıklaması:</label>
+    <textarea rows="4" class="table table-bordered" name="Description">@Model.Description</textarea>
+    <br />
+    <label>Referans Status:</label>
+    @Html.TextBoxFor(x => x.Status, new { @class = "table table-bordered" })
+    <br />
+    <button class="btn btn-success">Hizmeti Güncelle</button>
+</form>
+

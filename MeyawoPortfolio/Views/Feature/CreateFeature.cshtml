@@ -1,0 +1,23 @@
+﻿@model MeyawoPortfolio.Models.TblFuture
+
+@{
+    ViewBag.Title = "CreateFeature";
+    Layout = "~/Views/AdminLayout/_Layout.cshtml";
+}
+
+<h2>Yeni Özellik Bilgi Girişi</h2>
+
+<form method="post">
+
+    <label>Özellik Başlığı</label>
+    @Html.TextBoxFor(x => x.Header, new { @class = "table table-bordered" })
+    <br />
+    <label>Ad Soyad</label>
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "table table-bordered" })
+    <br />
+    <label>Özellik Etiketi</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "table table-bordered" })
+    <br />
+    <button class="btn btn-info">Özelliği Kaydet</button>
+</form>
+
