@@ -246,6 +246,15 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Templates\AdminAbout.png" />
+    <Content Include="Templates\AdminCategory.png" />
+    <Content Include="Templates\AdminContact.png" />
+    <Content Include="Templates\AdminDashboard.png" />
+    <Content Include="Templates\AdminIstatistik.png" />
+    <Content Include="Templates\AdminService.png" />
+    <Content Include="Templates\AdminSocialMedia.png" />
+    <Content Include="Templates\AdminTestimonial.png" />
+    <Content Include="Templates\DataBaseDiagram.png" />
     <Content Include="Templates\meyawo-1.0.0\assets\css\A.css" />
     <Content Include="Templates\meyawo-1.0.0\assets\css\meyawo.css" />
     <Content Include="Templates\meyawo-1.0.0\assets\imgs\analytics.svg" />
@@ -297,6 +306,9 @@
     <Content Include="Templates\sidebar-09\js\jquery.min.js" />
     <Content Include="Templates\sidebar-09\js\main.js" />
     <Content Include="Templates\sidebar-09\js\popper.js" />
+    <Content Include="Templates\UIBaslik.png" />
+    <Content Include="Templates\UIRef.png" />
+    <Content Include="Templates\UIService.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
